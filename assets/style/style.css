@@ -247,7 +247,7 @@ body {
 }
 
 .zei-focus-title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 24px;
@@ -515,6 +515,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Destaque opcional para o botão de apresentação no Footer */
+.zei-slides-btn:hover {
+  background-color: #ea4335; /* Cor característica de apresentações/Google */
+  color: #ffffff;
 }
 
 .zei-footer-socials {
