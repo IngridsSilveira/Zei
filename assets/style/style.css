@@ -30,8 +30,8 @@ body {
 }
 
 /* ----------------------------------------------------
-       0. HEADER & MENU RESPONSIVO
-    ---------------------------------------------------- */
+    0. HEADER & MENU RESPONSIVO
+---------------------------------------------------- */
 .zei-header {
   width: 100%;
   padding: 20px 0;
@@ -47,7 +47,7 @@ body {
 }
 
 .zei-logo img {
-  height: 40px;
+  height: 55px;
   width: auto;
   display: block;
 }
@@ -87,8 +87,8 @@ body {
 }
 
 /* ----------------------------------------------------
-       1. HERO SECTION (PRIMEIRA DOBRA)
-    ---------------------------------------------------- */
+    1. HERO SECTION (PRIMEIRA DOBRA)
+---------------------------------------------------- */
 .zei-hero-section {
   display: flex;
   align-items: center;
@@ -104,7 +104,7 @@ body {
 
 .zei-hero-title {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: #1a1a1a;
   margin-bottom: 16px;
@@ -166,7 +166,7 @@ body {
 
 .zei-btn-store {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.5px;
   transition: color 0.25s ease;
 }
@@ -215,8 +215,8 @@ body {
 }
 
 /* ----------------------------------------------------
-       2. FOCO NO QUE REALMENTE IMPORTA (MOCKUP CELULAR)
-    ---------------------------------------------------- */
+    2. FOCO NO QUE REALMENTE IMPORTA
+---------------------------------------------------- */
 .zei-focus-section {
   display: flex;
   align-items: center;
@@ -231,10 +231,8 @@ body {
   justify-content: center;
 }
 
-/* Imagem do Celular AUMENTADA */
 .zei-focus-img {
-  max-width: 380px;
-  /* Aumentado para dar destaque */
+  max-width: 340px;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -248,7 +246,7 @@ body {
 
 .zei-focus-title {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 24px;
   line-height: 1.2;
@@ -278,10 +276,10 @@ body {
 }
 
 /* ----------------------------------------------------
-       3. FEITO PARA SIMPLIFICAR (CARDS DE RECURSOS)
-    ---------------------------------------------------- */
+    3. FEITO PARA SIMPLIFICAR (CARDS DE RECURSOS)
+---------------------------------------------------- */
 .zei-cards-section {
-  max-width: 680px;
+  max-width: 1000px; /* Aumentamos de 680px para 1000px para dar mais largura */
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -289,7 +287,7 @@ body {
 .zei-section-title {
   text-align: center;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 32px;
   color: #1a1a1a;
 }
@@ -297,7 +295,7 @@ body {
 .zei-cards-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
 }
 
 .zei-card {
@@ -360,10 +358,11 @@ body {
   text-align: left;
 }
 
+/* Alterado de FLEX para GRID para facilitar no Mobile */
 .zei-grid-bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
 .zei-card-small {
@@ -378,8 +377,8 @@ body {
 }
 
 /* ----------------------------------------------------
-       4. CONTATO (FORMULÁRIO ELEGANTE)
-    ---------------------------------------------------- */
+    4. CONTATO (FORMULÁRIO)
+---------------------------------------------------- */
 .zei-contact-section {
   max-width: 680px;
   margin: 0 auto;
@@ -397,7 +396,7 @@ body {
 .zei-contact-title {
   text-align: center;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 8px;
 }
@@ -429,7 +428,7 @@ body {
 
 .zei-form-group label {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a1a1a;
 }
 
@@ -472,7 +471,7 @@ body {
   border-radius: 12px;
   padding: 14px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.5px;
   cursor: pointer;
   display: flex;
@@ -483,25 +482,15 @@ body {
   margin-top: 6px;
 }
 
-.zei-btn-arrow {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.25s ease;
-}
-
 .zei-btn-submit:hover {
   background-color: #4f8869;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(94, 159, 124, 0.3);
 }
 
-.zei-btn-submit:hover .zei-btn-arrow {
-  transform: translateX(4px);
-}
-
 /* ----------------------------------------------------
-       5. FOOTER (RODAPÉ)
-    ---------------------------------------------------- */
+    5. FOOTER (RODAPÉ)
+---------------------------------------------------- */
 .zei-footer {
   width: 100%;
   padding: 30px 0;
@@ -515,12 +504,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* Destaque opcional para o botão de apresentação no Footer */
-.zei-slides-btn:hover {
-  background-color: #ea4335; /* Cor característica de apresentações/Google */
-  color: #ffffff;
 }
 
 .zei-footer-socials {
@@ -554,6 +537,11 @@ body {
   box-shadow: 0 6px 15px rgba(94, 159, 124, 0.25);
 }
 
+.zei-slides-btn:hover {
+  background-color: #ea4335;
+  color: #ffffff;
+}
+
 .zei-footer-copy {
   font-size: 13px;
   font-weight: 500;
@@ -561,18 +549,19 @@ body {
 }
 
 .zei-footer-brand {
-  font-weight: 700;
+  font-weight: 600;
   color: #1a1a1a;
 }
 
 /* ----------------------------------------------------
-       RESPONSIVIDADE GERAL
-    ---------------------------------------------------- */
+    RESPONSIVIDADE GERAL
+---------------------------------------------------- */
 @media (max-width: 768px) {
   .zei-hamburger {
     display: block;
   }
 
+  /* Animação e comportamento do menu no mobile */
   .zei-nav-menu {
     position: absolute;
     top: 100%;
@@ -584,13 +573,18 @@ body {
     gap: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     border-radius: 0 0 16px 16px;
-    display: none;
-    /* Escondido por padrão */
+
+    /* Efeito Fade-In e Slide-Down em vez de display none bruto */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
   }
 
   .zei-nav-menu.active {
-    display: flex;
-    /* Exibe ao clicar no hambúrguer */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .zei-hero-section {
@@ -613,14 +607,19 @@ body {
     padding: 40px 0;
   }
 
+  /* Ajuste de tamanho dinâmico para não quebrar a tela */
   .zei-focus-img {
     max-width: 280px;
-    /* Ajuste suave em telas menores */
+    width: 80%;
   }
 }
 
 @media (max-width: 600px) {
-  .zei-grid-bottom,
+  /* Ajuste da grade dos cartões agora funciona pois é GRID */
+  .zei-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+
   .zei-form-row {
     grid-template-columns: 1fr;
   }

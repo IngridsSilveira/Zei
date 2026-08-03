@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zei - O aplicativo minimalista que traz paz mental e foco para a sua rotina de estudos.">
     <title>Zei - Organize seus estudos sem estresse</title>
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
-
 <body>
 
     <!-- HEADER & MENU -->
@@ -18,22 +17,23 @@
             </a>
 
             <!-- Menu Hambúrguer (Mobile) -->
-            <button class="zei-hamburger" id="zei-toggle-menu" aria-label="Abrir Menu">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
+            <button class="zei-hamburger" id="zei-toggle-menu" aria-label="Abrir Menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
 
-            <!-- Links de Navegação estilo WordPress -->
-            <ul class="zei-nav-menu" id="zei-nav">
-                <li><a href="#inicio">Home</a></li>
-                <li><a href="#recursos">Nosso App</a></li>
-                <li><a href="#sobre">Simplifique</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+            <!-- Links de Navegação -->
+            <nav>
+                <ul class="zei-nav-menu" id="zei-nav">
+                    <li><a href="#inicio">Home</a></li>
+                    <li><a href="#recursos">Nosso App</a></li>
+                    <li><a href="#sobre">Simplifique</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -49,10 +49,9 @@
                 </p>
 
                 <div class="zei-store-buttons">
-                    <a href="#" class="zei-store-btn">
+                    <a href="#" class="zei-store-btn" aria-label="Baixar na Play Store">
                         <svg class="zei-store-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.97C19.46,13.59 19.46,12.41 18.81,12.03L16.81,10.88L14.81,12.88M4.6,22.8L14.28,13.41L15.41,14.54L5.67,23.83C5.32,24.16 4.82,24.12 4.6,22.8M4.6,1.2C4.82,-0.12 5.32,-0.16 5.67,0.17L15.41,9.46L14.28,10.59L4.6,1.2Z" />
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.97C19.46,13.59 19.46,12.41 18.81,12.03L16.81,10.88L14.81,12.88M4.6,22.8L14.28,13.41L15.41,14.54L5.67,23.83C5.32,24.16 4.82,24.12 4.6,22.8M4.6,1.2C4.82,-0.12 5.32,-0.16 5.67,0.17L15.41,9.46L14.28,10.59L4.6,1.2Z" />
                         </svg>
                         <div class="zei-btn-text">
                             <span class="zei-btn-label">BAIXAR NA</span>
@@ -60,10 +59,9 @@
                         </div>
                     </a>
 
-                    <a href="#" class="zei-store-btn">
+                    <a href="#" class="zei-store-btn" aria-label="Baixar na Apple Store">
                         <svg class="zei-store-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.09,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.62 14.22,1.38 14.08,0C12.89,0.05 11.43,0.8 10.58,1.79C9.82,2.68 9.15,3.95 9.33,5.31C10.66,5.41 12.06,4.6 13,3.5Z" />
+                            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.09,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.62 14.22,1.38 14.08,0C12.89,0.05 11.43,0.8 10.58,1.79C9.82,2.68 9.15,3.95 9.33,5.31C10.66,5.41 12.06,4.6 13,3.5Z" />
                         </svg>
                         <div class="zei-btn-text">
                             <span class="zei-btn-label">BAIXAR NA</span>
@@ -84,29 +82,26 @@
     <section class="container" id="sobre">
         <div class="zei-focus-section">
             <div class="zei-focus-image-wrapper">
-                <img src="assets/images/Mockup-zei.png" alt="Mockup Zei" class="zei-focus-img" />
+                <img src="assets/images/mockup-zei-ilust.png" alt="Mockup do aplicativo Zei" class="zei-focus-img" />
             </div>
 
             <div class="zei-focus-content">
                 <h2 class="zei-focus-title">Foco no que realmente importa</h2>
                 <ul class="zei-focus-list">
                     <li>
-                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         <span>Interface limpa e zero distrações.</span>
                     </li>
                     <li>
-                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         <span>Recompensas visuais para o seu progresso.</span>
                     </li>
                     <li>
-                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         <span>Sem menus complexos ou planilhas chatas.</span>
@@ -122,8 +117,7 @@
         <div class="zei-cards-container">
             <div class="zei-card zei-card-large">
                 <div class="zei-icon-box">
-                    <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                         <line x1="16" y1="2" x2="16" y2="6"></line>
                         <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -140,8 +134,7 @@
             <div class="zei-grid-bottom">
                 <div class="zei-card zei-card-small">
                     <div class="zei-icon-box">
-                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
                             <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
                             <line x1="6" y1="1" x2="6" y2="4"></line>
@@ -152,11 +145,18 @@
                     <h3>Zero estresse</h3>
                     <p>Um alívio para a rotina, não uma ferramenta de cobrança.</p>
                 </div>
-
                 <div class="zei-card zei-card-small">
                     <div class="zei-icon-box">
-                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                        </svg>
+                    </div>
+                    <h3>Acompanhe sua evolução</h3>
+                    <p>Visualize seu progresso e mantenha a motivação em alta.</p>
+                </div>
+                <div class="zei-card zei-card-small">
+                    <div class="zei-icon-box">
+                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="4 20 8 20 8 15 12 15 12 10 16 10 16 5 20 5"></polyline>
                         </svg>
                     </div>
@@ -171,7 +171,7 @@
     <section class="zei-contact-section" id="contato">
         <div class="zei-contact-card">
             <h2 class="zei-contact-title">Fale com a gente!</h2>
-            <p class="zei-contact-subtitle">Dúvidas, sugestões ou parcerias? Mande uma mensagem para nossa equipe.</p>
+            <p class="zei-contact-subtitle">Dúvidas ou sugestões? Mande uma mensagem para nossa equipe.</p>
 
             <form class="zei-contact-form" action="#" method="POST" onsubmit="event.preventDefault();">
                 <div class="zei-form-row">
@@ -187,17 +187,11 @@
 
                 <div class="zei-form-group">
                     <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos te ajudar?"
-                        required></textarea>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos te ajudar?" required></textarea>
                 </div>
 
                 <button type="submit" class="zei-btn-submit">
                     <span>ENVIAR MENSAGEM</span>
-                    <svg class="zei-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
                 </button>
             </form>
         </div>
@@ -206,41 +200,36 @@
     <!-- FOOTER -->
     <footer class="zei-footer">
         <div class="zei-footer-container">
- <div class="zei-footer-socials">
-    <a href="#" aria-label="Play Store" class="zei-social-btn">
-        <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.97C19.46,13.59 19.46,12.41 18.81,12.03L16.81,10.88L14.81,12.88M4.6,22.8L14.28,13.41L15.41,14.54L5.67,23.83C5.32,24.16 4.82,24.12 4.6,22.8M4.6,1.2C4.82,-0.12 5.32,-0.16 5.67,0.17L15.41,9.46L14.28,10.59L4.6,1.2Z" />
-        </svg>
-    </a>
-    <a href="#" aria-label="Apple Store" class="zei-social-btn">
-        <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.09,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.62 14.22,1.38 14.08,0C12.89,0.05 11.43,0.8 10.58,1.79C9.82,2.68 9.15,3.95 9.33,5.31C10.66,5.41 12.06,4.6 13,3.5Z" />
-        </svg>
-    </a>
-    <a href="#" aria-label="Instagram" class="zei-social-btn">
-        <svg class="zei-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-    </a>
-
-    <!-- NOVO BOTÃO: Apresentação no Google Slides -->
-    <a href="https://docs.google.com/presentation/d/1CTrXdcMRbk7O_Jx77pw1wgWtQ5i7nD1nCkENVYyfCps/edit?usp=sharing" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Apresentação do Projeto" 
-       title="Ver Apresentação (Google Slides)" 
-       class="zei-social-btn zei-slides-btn">
-        <svg class="zei-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h20v14H2z"></path>
-            <path d="M8 21h8"></path>
-            <path d="M12 17v4"></path>
-            <path d="M10 8l5 3-5 3V8z" fill="currentColor"></path>
-        </svg>
-    </a>
-</div>
-
+            <div class="zei-footer-socials">
+                <a href="#" aria-label="Play Store" class="zei-social-btn">
+                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.97C19.46,13.59 19.46,12.41 18.81,12.03L16.81,10.88L14.81,12.88M4.6,22.8L14.28,13.41L15.41,14.54L5.67,23.83C5.32,24.16 4.82,24.12 4.6,22.8M4.6,1.2C4.82,-0.12 5.32,-0.16 5.67,0.17L15.41,9.46L14.28,10.59L4.6,1.2Z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Apple Store" class="zei-social-btn">
+                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.09,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.62 14.22,1.38 14.08,0C12.89,0.05 11.43,0.8 10.58,1.79C9.82,2.68 9.15,3.95 9.33,5.31C10.66,5.41 12.06,4.6 13,3.5Z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram" class="zei-social-btn">
+                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://docs.google.com/presentation/d/1CTrXdcMRbk7O_Jx77pw1wgWtQ5i7nD1nCkENVYyfCps/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Apresentação do Projeto" title="Ver Apresentação (Google Slides)" class="zei-social-btn zei-slides-btn">
+                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h20v14H2z"></path>
+                        <path d="M8 21h8"></path>
+                        <path d="M12 17v4"></path>
+                        <path d="M10 8l5 3-5 3V8z" fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="zei-footer-copy">
+                <a class="zei-footer-copy" style="text-decoration: none;" href="#">Para mais informações ou parcerias.</a>
+            </p>
             <p class="zei-footer-copy">
                 Feito com ❤️ por <span class="zei-footer-brand">Zei</span> - 2026
             </p>
@@ -254,15 +243,17 @@
 
         toggleBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            toggleBtn.setAttribute('aria-expanded', isExpanded);
         });
 
         // Fecha o menu ao clicar em algum link
         document.querySelectorAll('#zei-nav a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                toggleBtn.setAttribute('aria-expanded', 'false');
             });
         });
     </script>
 </body>
-
 </html>
