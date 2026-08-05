@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zei - O aplicativo minimalista que traz paz mental e foco para a sua rotina de estudos.">
+    <meta name="description"
+        content="Zei - O aplicativo minimalista que traz paz mental e foco para a sua rotina de estudos.">
     <title>Zei - Organize seus estudos sem estresse</title>
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
+
 <body>
 
     <!-- HEADER & MENU -->
@@ -18,7 +21,8 @@
 
             <!-- Menu Hambúrguer (Mobile) -->
             <button class="zei-hamburger" id="zei-toggle-menu" aria-label="Abrir Menu" aria-expanded="false">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -40,18 +44,24 @@
     <!-- HERO SECTION -->
     <section class="container" id="inicio">
         <div class="zei-hero-section">
+            <!-- Coluna da Esquerda: Textos e Botões -->
             <div class="zei-hero-content">
                 <h1 class="zei-hero-title">
                     Organize seus estudos <span class="zei-highlight">sem estresse.</span>
                 </h1>
+
                 <p class="zei-hero-subtitle">
                     O aplicativo minimalista que traz paz mental e foco para a sua rotina diária.
                 </p>
 
                 <div class="zei-store-buttons">
-                    <a href="#" class="zei-store-btn" aria-label="Baixar na Play Store">
-                        <svg class="zei-store-icon" viewBox="0 0 24 24">
-                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.97C19.46,13.59 19.46,12.41 18.81,12.03L16.81,10.88L14.81,12.88M4.6,22.8L14.28,13.41L15.41,14.54L5.67,23.83C5.32,24.16 4.82,24.12 4.6,22.8M4.6,1.2C4.82,-0.12 5.32,-0.16 5.67,0.17L15.41,9.46L14.28,10.59L4.6,1.2Z" />
+                    <!-- Play Store -->
+                    <a href="#" class="zei-store-btn">
+                        <svg class="zei-store-icon" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M17,14.5l4.2-4.5L4.9,1.2C4.8,1.1,4.6,1.1,4.3,1L17,14.5z" />
+                            <path d="M23,21l5.9-3.2c0.7-0.4,1.1-1,1.1-1.8s-0.4-1.5-1.1-1.8L23,11l-4.7,5L23,21z" />
+                            <path d="M2.4,1.9C2.1,2.2,2,2.6,2,3V29c0,0.4,0.1,0.8,0.4,1.2L15.6,16L2.4,1.9z" />
+                            <path d="M17,17.5L4.3,31c0.2,0,0.4-0.1,0.6-0.2L21.2,22L17,17.5z" />
                         </svg>
                         <div class="zei-btn-text">
                             <span class="zei-btn-label">BAIXAR NA</span>
@@ -59,9 +69,11 @@
                         </div>
                     </a>
 
-                    <a href="#" class="zei-store-btn" aria-label="Baixar na Apple Store">
-                        <svg class="zei-store-icon" viewBox="0 0 24 24">
-                            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.09,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.62 14.22,1.38 14.08,0C12.89,0.05 11.43,0.8 10.58,1.79C9.82,2.68 9.15,3.95 9.33,5.31C10.66,5.41 12.06,4.6 13,3.5Z" />
+                    <!-- Apple Store -->
+                    <a href="#" class="zei-store-btn">
+                        <svg class="zei-store-icon" viewBox="0 0 256 256" fill="currentColor">
+                            <path
+                                d="M82.041678,185.810289 L82.0657467,185.817889 L73.3130924,200.977891 C70.1182861,206.51167 63.0418283,208.407779 57.5080489,205.212719 C51.9745229,202.018166 50.0784142,194.941709 53.2732205,189.407929 L59.7211046,178.240042 L60.3397975,177.16835 C61.4449319,175.579561 64.1720448,172.838767 69.6270308,173.353838 C69.6270308,173.353838 82.4637674,174.747037 83.3925667,181.418887 C83.3928201,181.418887 83.5194976,183.614461 82.041678,185.810289 L82.041678,185.810289 Z M206.18511,147.089287 L178.890925,147.089287 C177.032313,146.96489 176.22031,146.3011 175.901843,145.915241 L175.881574,145.880024 L146.663918,95.2738878 L146.626168,95.2992233 L144.873712,92.786702 C142.002187,88.3953002 137.442051,99.6272864 137.442051,99.6272864 C131.997452,112.142769 138.21453,126.372451 140.382488,130.673152 L180.963875,200.962183 C184.158428,206.495962 191.234886,208.392071 196.768665,205.197011 C202.302191,202.002458 204.1983,194.926001 201.003494,189.392221 L190.855613,171.815973 C190.659263,171.390337 190.316981,170.233771 192.398038,170.229211 L206.18511,170.229211 C212.574975,170.229211 217.755071,165.049115 217.755071,158.659249 C217.755071,152.269383 212.574975,147.089287 206.18511,147.089287 Z M153.171088,162.818324 C153.171088,162.818324 154.627879,170.228957 148.99073,170.228957 L143.353582,170.228957 L143.353582,170.229211 L48.0918579,170.229211 C41.701992,170.229211 36.5218962,165.049115 36.5218962,158.659249 C36.5218962,152.269383 41.701992,147.089287 48.0918579,147.089287 L74.0318604,147.089287 C78.2198182,146.846573 79.2127163,144.42906 79.2127163,144.42906 L79.2355183,144.440715 L113.095904,85.7925846 L113.08577,85.7905577 C113.703196,84.6575543 113.189139,83.5871295 113.099704,83.417635 L101.917376,64.0494072 C98.7223163,58.5156278 100.618425,51.4394233 106.152204,48.244617 C111.685984,45.0495574 118.761935,46.9456661 121.956994,52.4794455 L127.143171,61.4623995 L132.320226,52.4954068 C135.515033,46.9616274 142.591237,45.0655188 148.125016,48.2605784 C153.658796,51.455638 155.554904,58.5318425 152.359845,64.0653685 L105.242153,145.675313 C105.036176,146.172142 104.97309,146.951969 106.505888,147.089287 L134.670094,147.089287 L134.676174,147.363671 C134.676174,147.363671 150.954231,147.617026 153.171088,162.818324 Z" />
                         </svg>
                         <div class="zei-btn-text">
                             <span class="zei-btn-label">BAIXAR NA</span>
@@ -71,6 +83,7 @@
                 </div>
             </div>
 
+            <!-- Coluna da Direita: Mancha Verde CSS + Imagem da Menina -->
             <div class="zei-hero-image-wrapper">
                 <div class="zei-green-blob"></div>
                 <img src="assets/images/menina-png.png" alt="Estudante organizada" class="zei-hero-img" />
@@ -89,19 +102,22 @@
                 <h2 class="zei-focus-title">Foco no que realmente importa</h2>
                 <ul class="zei-focus-list">
                     <li>
-                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         <span>Interface limpa e zero distrações.</span>
                     </li>
                     <li>
-                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         <span>Recompensas visuais para o seu progresso.</span>
                     </li>
                     <li>
-                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         <span>Sem menus complexos ou planilhas chatas.</span>
@@ -117,7 +133,8 @@
         <div class="zei-cards-container">
             <div class="zei-card zei-card-large">
                 <div class="zei-icon-box">
-                    <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                         <line x1="16" y1="2" x2="16" y2="6"></line>
                         <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -134,7 +151,8 @@
             <div class="zei-grid-bottom">
                 <div class="zei-card zei-card-small">
                     <div class="zei-icon-box">
-                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
                             <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
                             <line x1="6" y1="1" x2="6" y2="4"></line>
@@ -147,8 +165,10 @@
                 </div>
                 <div class="zei-card zei-card-small">
                     <div class="zei-icon-box">
-                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                            <polyline points="16 7 22 7 22 13"></polyline>
                         </svg>
                     </div>
                     <h3>Acompanhe sua evolução</h3>
@@ -156,7 +176,8 @@
                 </div>
                 <div class="zei-card zei-card-small">
                     <div class="zei-icon-box">
-                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="zei-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="4 20 8 20 8 15 12 15 12 10 16 10 16 5 20 5"></polyline>
                         </svg>
                     </div>
@@ -187,7 +208,8 @@
 
                 <div class="zei-form-group">
                     <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos te ajudar?" required></textarea>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos te ajudar?"
+                        required></textarea>
                 </div>
 
                 <button type="submit" class="zei-btn-submit">
@@ -200,38 +222,53 @@
     <!-- FOOTER -->
     <footer class="zei-footer">
         <div class="zei-footer-container">
+            <!-- Redes / Links Sociais -->
             <div class="zei-footer-socials">
+                <!-- Play Store -->
                 <a href="#" aria-label="Play Store" class="zei-social-btn">
-                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.97C19.46,13.59 19.46,12.41 18.81,12.03L16.81,10.88L14.81,12.88M4.6,22.8L14.28,13.41L15.41,14.54L5.67,23.83C5.32,24.16 4.82,24.12 4.6,22.8M4.6,1.2C4.82,-0.12 5.32,-0.16 5.67,0.17L15.41,9.46L14.28,10.59L4.6,1.2Z" />
+                    <svg class="zei-social-icon" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M17,14.5l4.2-4.5L4.9,1.2C4.8,1.1,4.6,1.1,4.3,1L17,14.5z" />
+                        <path d="M23,21l5.9-3.2c0.7-0.4,1.1-1,1.1-1.8s-0.4-1.5-1.1-1.8L23,11l-4.7,5L23,21z" />
+                        <path d="M2.4,1.9C2.1,2.2,2,2.6,2,3V29c0,0.4,0.1,0.8,0.4,1.2L15.6,16L2.4,1.9z" />
+                        <path d="M17,17.5L4.3,31c0.2,0,0.4-0.1,0.6-0.2L21.2,22L17,17.5z" />
                     </svg>
                 </a>
+
+                <!-- Apple Store -->
                 <a href="#" aria-label="Apple Store" class="zei-social-btn">
-                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.09,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.62 14.22,1.38 14.08,0C12.89,0.05 11.43,0.8 10.58,1.79C9.82,2.68 9.15,3.95 9.33,5.31C10.66,5.41 12.06,4.6 13,3.5Z" />
+                    <svg class="zei-social-icon" viewBox="0 0 256 256" fill="currentColor">
+                        <path
+                            d="M82.041678,185.810289 L82.0657467,185.817889 L73.3130924,200.977891 C70.1182861,206.51167 63.0418283,208.407779 57.5080489,205.212719 C51.9745229,202.018166 50.0784142,194.941709 53.2732205,189.407929 L59.7211046,178.240042 L60.3397975,177.16835 C61.4449319,175.579561 64.1720448,172.838767 69.6270308,173.353838 C69.6270308,173.353838 82.4637674,174.747037 83.3925667,181.418887 C83.3928201,181.418887 83.5194976,183.614461 82.041678,185.810289 L82.041678,185.810289 Z M206.18511,147.089287 L178.890925,147.089287 C177.032313,146.96489 176.22031,146.3011 175.901843,145.915241 L175.881574,145.880024 L146.663918,95.2738878 L146.626168,95.2992233 L144.873712,92.786702 C142.002187,88.3953002 137.442051,99.6272864 137.442051,99.6272864 C131.997452,112.142769 138.21453,126.372451 140.382488,130.673152 L180.963875,200.962183 C184.158428,206.495962 191.234886,208.392071 196.768665,205.197011 C202.302191,202.002458 204.1983,194.926001 201.003494,189.392221 L190.855613,171.815973 C190.659263,171.390337 190.316981,170.233771 192.398038,170.229211 L206.18511,170.229211 C212.574975,170.229211 217.755071,165.049115 217.755071,158.659249 C217.755071,152.269383 212.574975,147.089287 206.18511,147.089287 Z M153.171088,162.818324 C153.171088,162.818324 154.627879,170.228957 148.99073,170.228957 L143.353582,170.228957 L143.353582,170.229211 L48.0918579,170.229211 C41.701992,170.229211 36.5218962,165.049115 36.5218962,158.659249 C36.5218962,152.269383 41.701992,147.089287 48.0918579,147.089287 L74.0318604,147.089287 C78.2198182,146.846573 79.2127163,144.42906 79.2127163,144.42906 L79.2355183,144.440715 L113.095904,85.7925846 L113.08577,85.7905577 C113.703196,84.6575543 113.189139,83.5871295 113.099704,83.417635 L101.917376,64.0494072 C98.7223163,58.5156278 100.618425,51.4394233 106.152204,48.244617 C111.685984,45.0495574 118.761935,46.9456661 121.956994,52.4794455 L127.143171,61.4623995 L132.320226,52.4954068 C135.515033,46.9616274 142.591237,45.0655188 148.125016,48.2605784 C153.658796,51.455638 155.554904,58.5318425 152.359845,64.0653685 L105.242153,145.675313 C105.036176,146.172142 104.97309,146.951969 106.505888,147.089287 L134.670094,147.089287 L134.676174,147.363671 C134.676174,147.363671 150.954231,147.617026 153.171088,162.818324 Z" />
                     </svg>
                 </a>
+
+                <!-- Instagram -->
                 <a href="#" aria-label="Instagram" class="zei-social-btn">
-                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                     </svg>
                 </a>
-                <a href="https://docs.google.com/presentation/d/1CTrXdcMRbk7O_Jx77pw1wgWtQ5i7nD1nCkENVYyfCps/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Apresentação do Projeto" title="Ver Apresentação (Google Slides)" class="zei-social-btn zei-slides-btn">
-                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M2 3h20v14H2z"></path>
-                        <path d="M8 21h8"></path>
-                        <path d="M12 17v4"></path>
-                        <path d="M10 8l5 3-5 3V8z" fill="currentColor"></path>
+
+                <!-- Apresentação Google Slides (Ícone de Tela/Apresentação) -->
+                <a href="https://docs.google.com/presentation/d/1CTrXdcMRbk7O_Jx77pw1wgWtQ5i7nD1nCkENVYyfCps/edit?usp=sharing"
+                    target="_blank" rel="noopener noreferrer" aria-label="Apresentação do Projeto"
+                    title="Ver Apresentação (Google Slides)" class="zei-social-btn">
+                    <svg class="zei-social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z" />
                     </svg>
                 </a>
             </div>
+
+            <!-- Parceiros -->
             <p class="zei-footer-copy">
-                <a class="zei-footer-copy" style="text-decoration: none;" href="#">Para mais informações ou parcerias.</a>
+                <a class="zei-footer-copy" href="#">Para mais informações ou parcerias</a>
             </p>
+
+            <!-- Copyright -->
             <p class="zei-footer-copy">
-                Feito com ❤️ por <span class="zei-footer-brand">Zei</span> - 2026
+                Feito com ❤️ por <span class="zei-footer-brand">Zei</span> &copy; 2026
             </p>
         </div>
     </footer>
@@ -256,4 +293,5 @@
         });
     </script>
 </body>
+
 </html>
