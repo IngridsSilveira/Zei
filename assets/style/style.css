@@ -29,27 +29,45 @@ body {
   padding: 0 20px;
 }
 
-/* ----------------------------------------------------
-    0. HEADER & MENU RESPONSIVO
----------------------------------------------------- */
+/* HEADER & MENU RESPONSIVO */
 .zei-header {
   width: 100%;
   padding: 20px 0;
-  background-color: transparent;
-  position: relative;
-  z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.zei-header-container {
+.zei-header-card {
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
 }
 
 .zei-logo img {
-  height: 55px;
+  height: 36px;
   width: auto;
   display: block;
+}
+
+.zei-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.zei-hamburger svg {
+  width: 24px;
+  height: 24px;
+  stroke: #1a1a1a;
 }
 
 .zei-nav-menu {
@@ -61,9 +79,9 @@ body {
 
 .zei-nav-menu a {
   text-decoration: none;
-  color: #1a1a1a;
-  font-weight: 600;
-  font-size: 15px;
+  color: #666666;
+  font-weight: 500;
+  font-size: 14px;
   transition: color 0.25s ease;
 }
 
@@ -71,24 +89,25 @@ body {
   color: #5e9f7c;
 }
 
-/* Botão Hambúrguer (Mobile) */
-.zei-hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  color: #1a1a1a;
+.zei-header-btn {
+  background-color: #5e9f7c;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
-.zei-hamburger svg {
-  width: 28px;
-  height: 28px;
+.zei-header-btn:hover {
+  background-color: #4f8869;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(94, 159, 124, 0.3);
 }
 
-/* ----------------------------------------------------
-    1. HERO SECTION (PRIMEIRA DOBRA)
----------------------------------------------------- */
+/* HERO SECTION */
 .zei-hero-section {
   display: flex;
   align-items: center;
@@ -99,14 +118,33 @@ body {
 
 .zei-hero-content {
   flex: 1;
-  max-width: 500px;
+  max-width: 520px;
+}
+
+.zei-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e2f0e8;
+  color: #3e6e52;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.zei-badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #5e9f7c;
+  border-radius: 50%;
 }
 
 .zei-hero-title {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 800;
   line-height: 1.2;
-  color: #1a1a1a;
   margin-bottom: 16px;
 }
 
@@ -115,414 +153,535 @@ body {
 }
 
 .zei-hero-subtitle {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #666666;
+  font-size: 1rem;
+  color: #555555;
   margin-bottom: 32px;
 }
 
-/* Botões das Lojas */
 .zei-store-buttons {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 .zei-store-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background-color: #000000;
-  color: #ffffff;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 1px solid transparent;
   transition: all 0.25s ease;
 }
 
-.zei-store-icon {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  fill: currentColor;
-  transition: color 0.25s ease;
-}
-
-.zei-btn-text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  line-height: 1.1;
-}
-
-.zei-btn-label {
-  font-size: 9px;
-  color: #aaaaaa;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.25s ease;
-}
-
-.zei-btn-store {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: color 0.25s ease;
-}
-
-.zei-store-btn:hover {
-  background-color: #000000;
-  border-color: #5a926d;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.zei-store-btn:hover .zei-store-icon,
-.zei-store-btn:hover .zei-btn-label,
-.zei-store-btn:hover .zei-btn-store {
-  color: #5a926d !important;
-}
-
-/* Mancha Verde + Menina */
-.zei-hero-image-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 20px;
-}
-
-.zei-green-blob {
-  position: absolute;
-  width: 90%;
-  height: 85%;
-  background-color: #79b793;
-  border-radius: 48% 52% 68% 32% / 42% 58% 42% 58%;
-  filter: blur(35px);
-  opacity: 0.75;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.zei-hero-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  position: relative;
-  z-index: 2;
-}
-
-/* ----------------------------------------------------
-    2. FOCO NO QUE REALMENTE IMPORTA
----------------------------------------------------- */
-.zei-focus-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 80px 0;
-}
-
-.zei-focus-image-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.zei-focus-img {
-  max-width: 340px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
-}
-
-.zei-focus-content {
-  flex: 1;
-  max-width: 480px;
-}
-
-.zei-focus-title {
-  font-size: 28px;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 24px;
-  line-height: 1.2;
-}
-
-.zei-focus-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.zei-focus-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 16px;
-  color: #4a4a4a;
-  font-weight: 500;
-}
-
-.zei-check-icon {
-  width: 22px;
-  height: 22px;
-  color: #5a926d;
-  flex-shrink: 0;
-}
-
-/* ----------------------------------------------------
-    3. FEITO PARA SIMPLIFICAR (CARDS DE RECURSOS)
----------------------------------------------------- */
-.zei-cards-section {
-  max-width: 1000px; /* Aumentamos de 680px para 1000px para dar mais largura */
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-.zei-section-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 32px;
-  color: #1a1a1a;
-}
-
-.zei-cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.zei-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 28px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.zei-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 35px rgba(90, 146, 109, 0.12);
-  border-color: rgba(90, 146, 109, 0.3);
-}
-
-.zei-card h3 {
-  margin-bottom: 6px;
-  font-size: 17px;
-  font-weight: 700;
-  color: #1a1a1a;
-}
-
-.zei-card p {
-  font-size: 14px;
-  color: #666666;
-  line-height: 1.5;
-}
-
-.zei-icon-box {
-  width: 48px;
-  height: 48px;
-  background-color: rgba(90, 146, 109, 0.1);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #5a926d;
-  flex-shrink: 0;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.zei-card:hover .zei-icon-box {
-  background-color: #5a926d;
+.zei-btn-dark {
+  background-color: #1a1a1a;
   color: #ffffff;
 }
 
-.zei-card-icon {
+.zei-btn-dark:hover {
+  background-color: #333333;
+}
+
+.zei-btn-light {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.zei-btn-light:hover {
+  background-color: #f8f8f8;
+}
+
+.zei-store-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.zei-hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.zei-hero-bg-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(94, 159, 124, 0.904);
+  filter: blur(80px);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.zei-hero-card-img {
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+}
+
+.zei-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+}
+
+.zei-status-card {
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.zei-status-icon {
+  color: #5e9f7c;
+  display: flex;
+}
+
+.zei-status-icon svg {
   width: 24px;
   height: 24px;
 }
 
-.zei-card-large {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-align: left;
-}
-
-/* Alterado de FLEX para GRID para facilitar no Mobile */
-.zei-grid-bottom {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.zei-card-small {
+.zei-status-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  font-size: 12px;
 }
 
-.zei-card-small .zei-icon-box {
+.zei-status-label {
+  color: #777777;
+}
+
+.zei-status-text strong {
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+/* SEÇÃO FOCO */
+.zei-foco-section {
+  padding: 80px 0;
+}
+
+.zei-foco-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.zei-foco-card-wrapper {
+  flex: 1;
+}
+
+.zei-foco-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.zei-foco-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.zei-foco-card-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.zei-foco-badge {
+  background-color: #e2f0e8;
+  color: #3e6e52;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.zei-foco-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.zei-foco-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #444444;
+}
+
+.zei-foco-list li.completed .text {
+  text-decoration: line-through;
+  color: #aaaaaa;
+}
+
+.zei-foco-list .checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #cccccc;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.zei-foco-list li.completed .checkbox {
+  background-color: #5e9f7c;
+  border-color: #5e9f7c;
+}
+
+.zei-foco-progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.zei-foco-progress-fill {
+  width: 60%;
+  height: 100%;
+  background-color: #5e9f7c;
+}
+
+.zei-foco-content {
+  flex: 1;
+}
+
+.zei-tagline {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #5e9f7c;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.zei-foco-title {
+  font-size: 2rem;
+  font-weight: 800;
   margin-bottom: 16px;
 }
 
-/* ----------------------------------------------------
-    4. CONTATO (FORMULÁRIO)
----------------------------------------------------- */
-.zei-contact-section {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 40px 20px 60px;
+.zei-foco-description {
+  color: #555555;
+  margin-bottom: 24px;
 }
 
-.zei-contact-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+.zei-foco-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.zei-contact-title {
+.zei-foco-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.zei-icon-box {
+  width: 36px;
+  height: 36px;
+  background-color: #e2f0e8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5e9f7c;
+  flex-shrink: 0;
+}
+
+.zei-icon-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* SEÇÃO SIMPLIFICAR (CARDS) */
+.zei-simplificar-section {
+  padding: 60px 0;
+}
+
+.zei-simplificar-header {
   text-align: center;
-  font-size: 28px;
-  font-weight: 600;
-  color: #1a1a1a;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.zei-simplificar-title {
+  font-size: 2rem;
+  font-weight: 800;
   margin-bottom: 8px;
 }
 
-.zei-contact-subtitle {
-  text-align: center;
-  font-size: 14px;
+.zei-simplificar-subtitle {
   color: #666666;
-  margin-bottom: 30px;
 }
 
-.zei-contact-form {
-  display: flex;
-  flex-direction: column;
+.zei-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
 
-.zei-form-row {
+.zei-card {
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease;
+}
+.zei-card-featured {
+  background-color: #5e9f7c;
+}
+.zei-card-text-featured {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.zei-card:hover {
+  transform: translateY(-5px);
+}
+
+.zei-card-icon {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.zei-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.zei-card-text {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* SEÇÃO CTA */
+.zei-cta-section {
+  padding: 60px 0;
+}
+
+.zei-cta-content {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 32px;
+  padding: 60px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zei-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.zei-cta-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.zei-cta-subtitle {
+  color: #aaaaaa;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.zei-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.zei-cta-btn {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  transition: transform 0.25s ease;
+}
+
+.zei-cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+.zei-cta-btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* SEÇÃO CONTATO */
+.zei-contato-section {
+  padding: 60px 0;
+}
+
+.zei-contato-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Centraliza o texto e ajusta os elementos internos da info de contato */
+.zei-contato-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Garante alinhamento centralizado se houver elementos flex dentro */
+}
+
+.zei-contato-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 10px 0 16px;
+}
+
+.zei-contato-desc {
+  color: #666666;
+}
+
+.zei-contato-form {
+  display: flex;
+  flex-direction: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
 .zei-form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .zei-form-group label {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #333333;
 }
 
 .zei-form-group input,
 .zei-form-group textarea {
   width: 100%;
   padding: 12px 16px;
-  border: 1.5px solid #e2e8f0;
   border-radius: 10px;
-  background-color: #f8fafc;
-  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
   font-family: inherit;
-  color: #1a1a1a;
+  font-size: 14px;
   outline: none;
-  transition: all 0.25s ease;
-}
-
-.zei-form-group input::placeholder,
-.zei-form-group textarea::placeholder {
-  color: #a0aec0;
+  transition: border-color 0.25s ease;
 }
 
 .zei-form-group input:focus,
 .zei-form-group textarea:focus {
-  background-color: #ffffff;
   border-color: #5e9f7c;
-  box-shadow: 0 0 0 4px rgba(94, 159, 124, 0.15);
+  background-color: #ffffff;
 }
 
-.zei-form-group textarea {
-  resize: vertical;
-  min-height: 110px;
-}
-
-.zei-btn-submit {
-  width: 100%;
+.zei-form-submit {
   background-color: #5e9f7c;
   color: #ffffff;
   border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 14px;
+  padding: 14px 24px;
+  border-radius: 10px;
   font-weight: 600;
-  letter-spacing: 0.5px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  margin-top: 6px;
+  gap: 8px;
+  transition: background-color 0.25s ease;
 }
 
-.zei-btn-submit:hover {
+.zei-form-submit:hover {
   background-color: #4f8869;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(94, 159, 124, 0.3);
 }
 
-/* ----------------------------------------------------
-    5. FOOTER (RODAPÉ)
----------------------------------------------------- */
+.zei-form-submit svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* FOOTER */
 .zei-footer {
-  width: 100%;
-  padding: 30px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 40px 0;
+  text-align: center;
 }
 
 .zei-footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
 }
 
 .zei-footer-socials {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
 .zei-social-btn {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.04);
-  color: #1a1a1a;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #333333;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease;
+}
+
+.zei-social-btn:hover {
+  transform: translateY(-2px);
+  color: #5e9f7c;
 }
 
 .zei-social-icon {
@@ -530,113 +689,152 @@ body {
   height: 18px;
 }
 
-.zei-social-btn:hover {
-  background-color: #5e9f7c;
-  color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(94, 159, 124, 0.25);
-}
-
-.zei-slides-btn:hover {
-  background-color: #ea4335;
-  color: #ffffff;
-}
-
 .zei-footer-copy {
   font-size: 13px;
-  font-weight: 500;
-  color: #666666;
+  color: #777777;
+}
+
+.zei-footer-link {
+  color: #777777;
   text-decoration: none;
 }
 
+.zei-footer-link:hover {
+  color: #5e9f7c;
+}
+
 .zei-footer-brand {
-  font-weight: 600;
+  font-weight: 700;
   color: #1a1a1a;
 }
 
-/* ----------------------------------------------------
-    RESPONSIVIDADE GERAL
----------------------------------------------------- */
-@media (max-width: 768px) {
-  .zei-hamburger {
-    display: block;
-  }
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
 
-  /* Animação e comportamento do menu no mobile */
-  .zei-nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 0 0 16px 16px;
-
-    /* Efeito Fade-In e Slide-Down em vez de display none bruto */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
-
-  .zei-nav-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
+/* Tablets / Telas Médias (max-width: 992px) */
+@media (max-width: 992px) {
   .zei-hero-section {
     flex-direction: column;
     text-align: center;
     padding: 20px 0 40px;
   }
 
-  .zei-hero-title {
-    font-size: 32px;
+  .zei-hero-content {
+    max-width: 100%;
   }
 
   .zei-store-buttons {
     justify-content: center;
   }
 
-  .zei-focus-section {
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px 0;
+  .zei-status-card {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 80%;
+    justify-content: center;
   }
 
-  /* Ajuste de tamanho dinâmico para não quebrar a tela */
-  .zei-focus-img {
-    max-width: 280px;
-    width: 80%;
+  .zei-foco-wrapper {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .zei-foco-content {
+    text-align: center;
+  }
+
+  .zei-foco-features {
+    align-items: center;
+  }
+
+  .zei-contato-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
-@media (max-width: 600px) {
-  /* Ajuste da grade dos cartões agora funciona pois é GRID */
-  .zei-grid-bottom {
-    grid-template-columns: 1fr;
+/* Smartphones / Telas Pequenas (max-width: 768px) */
+@media (max-width: 768px) {
+  .zei-hamburger {
+    display: block;
   }
 
-  .zei-form-row {
-    grid-template-columns: 1fr;
+  .zei-header-btn {
+    display: none;
   }
 
-  .zei-card-large {
+  .zei-nav-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .zei-nav-menu {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0;
+    padding: 10px 0;
   }
 
-  .zei-contact-card {
-    padding: 24px 18px;
-  }
-
-  .zei-footer-container {
-    flex-direction: column;
-    gap: 16px;
+  .zei-nav-menu li {
+    width: 100%;
     text-align: center;
+  }
+
+  .zei-nav-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Exibe o menu ao adicionar a classe active via JS */
+  .zei-nav-menu.active {
+    max-height: 300px;
+  }
+
+  .zei-hero-title {
+    font-size: 2rem;
+  }
+
+  .zei-foco-title,
+  .zei-simplificar-title,
+  .zei-cta-title {
+    font-size: 1.6rem;
+  }
+
+  .zei-cta-content {
+    padding: 40px 20px;
+  }
+
+  .zei-contato-card {
+    padding: 24px;
+  }
+}
+
+/* Dispositivos Muito Pequenos (max-width: 480px) */
+@media (max-width: 480px) {
+  .zei-store-buttons,
+  .zei-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .zei-store-btn,
+  .zei-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .zei-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
