@@ -455,9 +455,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.04);
   transition: transform 0.25s ease;
 }
+
 .zei-card-featured {
   background-color: #5e9f7c;
 }
+
 .zei-card-text-featured {
   font-size: 14px;
   color: #ffffff;
@@ -568,11 +570,10 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
-/* Centraliza o texto e ajusta os elementos internos da info de contato */
 .zei-contato-info {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Garante alinhamento centralizado se houver elementos flex dentro */
+  justify-content: center;
 }
 
 .zei-contato-title {
@@ -587,7 +588,6 @@ body {
 
 .zei-contato-form {
   display: flex;
-  flex-direction: flex;
   flex-direction: column;
   gap: 16px;
 }
@@ -797,26 +797,8 @@ body {
   }
 
   /* Exibe o menu ao adicionar a classe active via JS */
-  .zei-nav-menu.active {
-    max-height: 300px;
-  }
-
-  .zei-hero-title {
-    font-size: 2rem;
-  }
-
-  .zei-foco-title,
-  .zei-simplificar-title,
-  .zei-cta-title {
-    font-size: 1.6rem;
-  }
-
-  .zei-cta-content {
-    padding: 40px 20px;
-  }
-
-  .zei-contato-card {
-    padding: 24px;
+  .zei-nav-wrapper.active {
+    max-height: 350px;
   }
 }
 
